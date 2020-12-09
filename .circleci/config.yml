@@ -11,4 +11,11 @@ jobs:
       - checkout
       - run: ./mvnw test verify
       - store_artifacts:
-          path: Reports/AndroidSanityReport.html
+          path: target/site/jacoco/index.html
+
+workflows:
+  version: 2
+
+  test-with-store-artifacts:
+    jobs:
+      - test

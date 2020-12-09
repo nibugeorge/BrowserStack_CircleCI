@@ -24,10 +24,8 @@ jobs:
         path: target/surefire-reports
     - store_artifacts:
         path: Reports/
-        destination: Reports
     - store_artifacts:
         path: Screenshots/
-        destination: Screenshots
 workflows:
   maven_test:
     jobs:
